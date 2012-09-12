@@ -1,0 +1,16 @@
+h1 Delete Assignment
+hl
+h2 Assignments
+table border=1
+  tr
+    th Assignment Name
+    th Assignment Type
+    th Delete?
+  - Assignment.where(student_id: nil).each do |assn|
+    tr
+      td = assn.name
+      td = assn.assignment_type
+      td
+        - form_tag "/assignment/delete", method: "post" do
+          == hidden_field_tag :name, value: assn.name
+          == submit_tag "Delete"

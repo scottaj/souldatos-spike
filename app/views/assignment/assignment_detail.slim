@@ -1,0 +1,16 @@
+h1 = assignment.name
+h2 = assignment.assignment_type
+h2 #{assignment.total_points} Points
+hl
+h3 Questions
+table border=1
+  tr
+    th Question Text
+    th Question Value
+  - Question.where(assignment_id: assignment.id).each do |q|
+    tr
+      td = q.text
+      td = q.value
+  a href='/question/new/#{assignment.id}' New Question
+  br    
+  a href='/question/delete/#{assignment.id}' Delete Question
