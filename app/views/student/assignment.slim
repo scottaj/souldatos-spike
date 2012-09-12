@@ -9,7 +9,7 @@ h3 Questions
       h5 = q.text
       h5 #{q.value} Points
       == label_tag :"score_#{q.id}"
-      == select_tag :"score_#{q.id}", options: (0..(q.value)).to_a
+      == select_tag :"score_#{q.id}", options: (0..(q.value)).to_a, selected: q.score if q.score
   - field_set_tag do
     == hidden_field_tag :assignment, value: assignment.id    
     == submit_tag "Save"    
