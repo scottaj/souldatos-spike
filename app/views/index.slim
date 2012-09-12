@@ -1,0 +1,12 @@
+h1 Summary of Students and Assignments
+hl
+div id="students"
+  == render 'partials/student_summary', layout: false, locals: {students: Student.all}
+  a href="/student/new" New Student
+  br
+  a href="/student/delete" Delete Student
+div id="assignments"
+  == render 'partials/assignment_summary', layout: false, locals: {assignments: Assignment.where(student_id: nil)}
+  a href="/assignment/new" New Assignment
+  br
+  a href="/assignment/delete" Delete Assignment  

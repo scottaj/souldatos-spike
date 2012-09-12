@@ -9,4 +9,8 @@ class SouldatosSpike < Padrino::Application
   layout :layout
 
   Slim::Engine.set_default_options :pretty => true
+
+  get :index do
+    render 'index', locals: {page_title: "Summary"}
+  end
 end

@@ -1,7 +1,6 @@
 class Question < ActiveRecord::Base
-  attr_accessor :number, :text, :value, :score, :complete, :assignment_id
-
   belongs_to :assignment
 
-  validates_presence_of :number, :text, :value
+  validates_presence_of :text, :value
+  validates_uniqueness_of :text, scope: :assignment_id
 end
