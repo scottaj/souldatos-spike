@@ -12,6 +12,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'slim'
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3'
+gem 'thin'
 
 # Test requirements
 group :test do
