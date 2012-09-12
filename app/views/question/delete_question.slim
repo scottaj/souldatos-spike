@@ -1,0 +1,26 @@
+h1 Delete Question
+h2 = assignment.name
+hl
+table border=1
+  tr
+    th Question
+    th Points
+    th Delete?
+  - Question.where(assignment_id: assignment.id).each do |q|
+    tr
+      td = q.text
+      td = q.value
+      td
+        - form_tag "/question/delete", method: "post" do
+          == hidden_field_tag :text, value: q.text
+          == hidden_field_tag :assn, value: assignment.name
+          == submit_tag "Delete"
+
+
+
+
+
+
+
+
+
