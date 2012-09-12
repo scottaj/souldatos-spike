@@ -1,0 +1,15 @@
+h1 = assignment.name
+h2 = assignment.assignment_type
+h2 = student.name
+hl
+h3 Questions
+- form_tag "/student/assignment", method: "post" do
+  - questions.each do |q|
+    - field_set_tag do
+      h5 = q.text
+      h5 #{q.value} Points
+      == label_tag :"score_#{q.id}"
+      == select_tag :"score_#{q.id}", options: (0..(q.value)).to_a
+  - field_set_tag do
+    == hidden_field_tag :assignment, value: assignment.id    
+    == submit_tag "Save"    

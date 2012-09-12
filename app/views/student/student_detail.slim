@@ -1,0 +1,18 @@
+h1 = student.name
+h2 = student.udm_id
+hl
+h3 Assignments
+table border=1
+  tr
+    th Name
+    th Type
+    th Points
+    th Score
+    th Percentage
+  - Assignment.where(student_id: student.id).each do |assignment|
+    tr
+      td <a href="/student/assignment/#{assignment.id}">#{assignment.name}</a>
+      td = assignment.assignment_type
+      td = assignment.total_points
+      td = assignment.total_score
+      td  #{assignment.percentage.round(2)}%

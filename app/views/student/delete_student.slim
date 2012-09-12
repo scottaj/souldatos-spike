@@ -1,0 +1,16 @@
+h1 Delete Student
+hl
+h2 Students
+table border=1
+  tr
+    th Student ID
+    th Name
+    th Delete?
+  - Student.all.each do |student|
+    tr
+      td = student.udm_id
+      td = student.name
+      td
+        - form_tag "/student/delete", method: "post" do
+          == hidden_field_tag :id, value: student.udm_id
+          == submit_tag "Delete"
