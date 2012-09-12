@@ -1,0 +1,13 @@
+h2 Assignments
+table border=1
+  tr
+    th Assignment
+    th Type
+    th Questions
+    th Points
+  - assignments.each do |assignment|
+    tr
+      td <a href="/assignment/#{assignment.id}">#{assignment.name}</a>
+      td = assignment.assignment_type
+      td = assignment.questions.size
+      td = assignment.total_points

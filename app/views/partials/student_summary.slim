@@ -1,0 +1,9 @@
+h2 Students
+table border=1
+  tr
+    th Student ID
+    th Name
+  - students.each do |student|
+    tr
+      td <a href="/student/#{student.udm_id}">#{student.udm_id}</a>
+      td #{student.name}
