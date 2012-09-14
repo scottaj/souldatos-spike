@@ -10,10 +10,11 @@ This prototype is not intended to be a perfect model of the application requirem
 ### *nix ###
 1. Install [rvm](rvm.io)
 1. Install sqlite3 for your version of *nix
+1. Install R for your version of *nix
 1. Run "_git clone git://github.com/scottaj/souldatos-spike.git_"
 1. cd into the cloned directory
 1. Run "_bundle install_"
-1. Run "_bundle exec rake ar:setup_"
+1. Run "_bundle exec rake ar:schema:load_"
 
 ### Windows ###
 1. Install [Ruby 1.9.3](http://rubyinstaller.org/downloads/) for Windows.
@@ -23,6 +24,7 @@ This prototype is not intended to be a perfect model of the application requirem
    * Open a Command Prompt in the extracted archive directory
    * Run the command "_ruby dk.rb init_"
    * Run the command "_ruby dk.rb install_"
+1. Install [R](http://cran.r-project.org/bin/windows/base/)
 1. Install [github for windows](http://windows.github.com/)
    * You will need to sign up for a Github Account
 1. Clone the repository by clicking the _Clone in Windows_ button on [github](https://github.com/scottaj/souldatos-spike)
@@ -32,9 +34,9 @@ This prototype is not intended to be a perfect model of the application requirem
    * This should open a Powershell window
    * Enter the command "_gem install bundler_"
    * Enter the command "_bundle install_"
-1. Setup the database by running the command "_bundle exec rake ar:setup_"
+1. Setup the database by running the command "_bundle exec rake ar:schema:load_"
    
 ## Running ##
 
 1. After installation run the command "_bundle exec padrino start_" in the application directory to start the web server.
-1. Open a web browser and navigate to [http://localhost:3000] to use the application.
+1. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to use the application.
