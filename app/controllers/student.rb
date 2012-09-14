@@ -56,6 +56,6 @@ SouldatosSpike.controllers :student do
       q.save
     end
 
-    redirect "/student/assignment/#{assignment.id}"
+    redirect "/student/#{Student.find(assignment.student_id).udm_id}"
   end
 end

@@ -1,0 +1,10 @@
+h1 = page_title
+hl
+h2 = table_title
+table class="table table-bordered" 
+  tr
+    - table_headers.each do |th|
+      th = th
+  tr
+    - table.each_value do |v|
+      td = v.round(2)

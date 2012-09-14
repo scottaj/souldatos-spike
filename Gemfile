@@ -13,6 +13,7 @@ gem 'slim'
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3'
 gem 'thin'
+gem 'rinruby'
 
 # Test requirements
 group :test do

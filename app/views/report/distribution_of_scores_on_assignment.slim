@@ -1,0 +1,5 @@
+h1 Select Assignment for report
+- form_tag "/report/distribution_of_scores_on_assignment", method: "post" do
+  == select_tag :assignment, options: Assignment.where(student_id: nil).map {|a| a.name}
+  br
+  == submit_tag "Generate"

@@ -9,4 +9,11 @@ div id="assignments"
   == render 'partials/assignment_summary', layout: false, locals: {assignments: Assignment.where(student_id: nil)}
   a class="btn btn-primary" href="/assignment/new" New Assignment
   br
-  a class="btn btn-primary" href="/assignment/delete" Delete Assignment  
+  a class="btn btn-primary" href="/assignment/delete" Delete Assignment
+
+h2 Generate Report
+- form_tag "/report", method: "get" do
+  == label_tag :report_type
+  == select_tag :report_type, options: REPORT_TYPES
+  br
+  == submit_tag "Generate"

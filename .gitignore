@@ -6,4 +6,5 @@ vendor/gems/*
 !vendor/gems/cache/
 .sass-cache/*
 *~
-/db/souldatos_spike_development.db
+db/*.db
+public/img/report/*
