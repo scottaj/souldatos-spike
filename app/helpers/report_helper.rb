@@ -5,4 +5,8 @@ SouldatosSpike.helpers do
                   "Average Grade on Assignment",
                   "Distribution of Scores on Assignment"
                  ]
+
+  def assignment_percentage_in_range(range)
+    return Assignment.where(name: params[:assignment]).select {|a| range.include?(a.percentage)}
+  end
 end
